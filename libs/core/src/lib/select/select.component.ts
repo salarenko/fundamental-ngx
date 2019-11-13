@@ -269,13 +269,8 @@ export class SelectComponent implements OnChanges, AfterContentInit, OnInit, OnD
     /** @hidden */
     @HostListener('keydown', ['$event'])
     keydownHandler(event: KeyboardEvent): void {
-<<<<<<< HEAD
         switch (event.key) {
             case ('ArrowUp'): {
-=======
-        switch (event.code) {
-            case 'ArrowUp': {
->>>>>>> added changed icon
                 event.preventDefault();
                 this.decrementFocused();
                 break;

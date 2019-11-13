@@ -5,7 +5,6 @@
             <ng-container *ngTemplateOutlet="triggerTemplate; context: {$implicit: this}"></ng-container>
         </ng-container>
         <ng-container *ngIf="!triggerTemplate">
-<<<<<<< HEAD
             <button class="fd-select-button-custom"
                     fd-button
                     aria-haspopup="true"
@@ -17,17 +16,11 @@
                 <fd-icon *ngIf="glyph" size="m" [glyph]="glyph" class="fd-template-icon" style="margin-top: 3px; margin-right: 12px">
                 </fd-icon>
                 <span class="fd-select-text-custom">{{triggerValue}}</span>
-=======
-            <button fd-button class="fd-select-button-custom" aria-haspopup="true" [ngClass]="{
-                    'fd-select-button-custom--loading': loading,
-                    'fd-button--compact': compact
-                }" [attr.aria-expanded]="isOpen" [disabled]="disabled">
-                <span class="fd-select-text-custom">{{ triggerValue }}</span>
->>>>>>> added changed icon
             </button>
         </ng-container>
     </fd-popover-control>
-    <fd-popover-body class="fd-select-popover-body-custom" [style.maxHeight]="maxHeight || calculatedMaxHeight + 'px'">
+    <fd-popover-body *ngIf="!loading" class="fd-select-popover-body-custom"
+        [style.maxHeight]="maxHeight || calculatedMaxHeight + 'px'">
         <fd-menu>
             <ul fd-menu-list>
                 <ng-content></ng-content>
