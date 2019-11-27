@@ -83,11 +83,11 @@ export class SelectComponent implements OnChanges, AfterContentInit, OnInit, OnD
 
     /** Select type defines the border type of the select button. */
     @Input()
-    selectType: SelectType ;
-    
+    selectType: SelectType;
+
     /** Glyph to add icon in the select component. */
     @Input()
-    glyph: string ;
+    glyph: string;
 
     /** Popper.js options of the popover. */
     @Input()
